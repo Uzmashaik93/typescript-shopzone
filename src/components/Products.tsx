@@ -7,6 +7,8 @@ interface ProductsType {
 
 function Products({ products }: ProductsType) {
   return (
+   <div className="products">
+    <h1>Products ({products.length})</h1>
     <div className="container">
       {products.map((product) => {
         return (
@@ -23,6 +25,7 @@ function Products({ products }: ProductsType) {
         );
       })}
     </div>
+   </div>
   );
 }
 
