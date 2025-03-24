@@ -8,7 +8,12 @@ function Header() {
         <h2>Shopzone</h2>
       </div>
        
-        <input type="text" placeholder='search the product'/>
+        <input onChange={(e)=>{
+console.log(e.target.value);
+
+        }} 
+        type="text" 
+        placeholder='search the product'/>
     </header>
   )
 }
