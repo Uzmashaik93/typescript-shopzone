@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    text-align: center;
+}
+
+header{
+    background-color: purple;
+    color: white;
+    padding: 15px;
+    display: flex;
+    gap: 20px;
+}
+
+.logo{
+    display: flex;
+    gap: 8px;
+}
+
+header input{
+    padding: 10px;
+    flex: 1;
+}
+
+header img{
+    width: 40px;
+}
