@@ -1,45 +1,51 @@
-*{
-    padding: 0;
-    margin: 0;
+/* Reset Styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-
-
-header{
-    position: sticky;
-    top: 0;
-    background-color: rgb(100, 94, 175);
-    color: white;
-    padding: 15px;
-    display: flex;
-    gap: 20px;
+/* Header Styles */
+header {
+  position: sticky;
+  top: 0;
+  background-color: rgb(100, 94, 175);
+  color: white;
+  padding: 15px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  z-index: 1000;
 }
 
-.logo{
-    display: flex;
-    gap: 8px;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-header input{
-    padding: 10px;
-    flex: 1;
-    border: none;
-    border-radius: 6px;
+header input {
+  padding: 10px;
+  flex: 1;
+  border: none;
+  border-radius: 6px;
 }
 
-header img{
-    width: 40px;
+header img {
+  width: 40px;
 }
 
-.container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-    gap:30px;
+/* Container Styles */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 30px;
 }
 
-.card{
+/* Card Styles */
+.card {
   width: 14rem;
   display: flex;
   flex-direction: column;
@@ -47,46 +53,107 @@ header img{
   align-items: center;
   padding: 10px;
   border-radius: 10px;
+  background-color: white;
   box-shadow: 0px 0px 33px 0px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
 }
-.card:hover{
-    scale: 105%;
-    cursor: pointer;
+
+.card:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
-.image-container{
+
+.image-container {
   width: 100px;
-  height:auto ;
 }
 
-.image-container img{
-    width: 100px;
-    height: 200px;
-    object-fit: contain;
+.img {
+  width: 100px;
+  height: 200px;
+  object-fit: contain;
 }
 
-.card button{
-    background-color: rgb(34,34,95);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 10px;
+.card button {
+  background-color: rgb(34, 34, 95);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
 }
 
-.card button:hover{
-    background-color: rgb(71, 71, 148);
+.card button:hover {
+  background-color: rgb(71, 71, 148);
 }
 
-.card-body{
-    width: 100%;
-    flex: 1;
-    padding: 10px;
+.card-body {
+  width: 100%;
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.products {
+  text-align: center;
+  margin: 30px;
+}
+
+/* Backdrop Styles */
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(34, 34, 95, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  background-color: white;
+  width: 80%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.product-body .title {
+  font-size: large;
+  font-weight: bold;
+}
+
+.product-body p {
+  padding-top: 7px;
+  font-size: small;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+.product-body button {
+  margin: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .backdrop {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    justify-content: space-between;
-}
+  }
 
-.products{
-    text-align: center;
-    margin: 30px;
+  .popup {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
 }
