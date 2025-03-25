@@ -1,6 +1,10 @@
 import React from 'react'
 
-function Header() {
+interface HeaderTypes{
+  searchProducts:(s:string)=>void
+}
+
+function Header({searchProducts}:HeaderTypes) {
   return (
     <header>
       <div className='logo'>
@@ -9,7 +13,7 @@ function Header() {
       </div>
        
         <input onChange={(e)=>{
-console.log(e.target.value);
+searchProducts(e.target.value);
 
         }} 
         type="text" 
